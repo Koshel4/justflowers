@@ -1,5 +1,7 @@
 var flowersAmount = 0;
+var canGrow = true;
 function Grow(x, y) {
+if (canGrow) {
     var flowerNum = Math.trunc(Math.random() * 11);
     console.log(flowerNum);
     if(flowerNum == 0) {
@@ -64,13 +66,19 @@ function Grow(x, y) {
     flowersAmount++;
     if (flowersAmount == 10) {
         document.body.innerHTML += '<div><img id = "bird" src = "sprites/bird.png"></div>';
-        setTimeout(movebird, 3000);
+	    canGrow = false;
+        setTimeout(movebird, 200);
     }
     if (flowersAmount == 20) {
         document.body.style.backgroundImage = 'url(sprites/sky2.jpg)'
         document.body.innerHTML += '<h1 id = "Color">C 8 <br>Марта!</h1>';
     }
-}
-async function movebird() {
+}}
+function movebird() {
     document.getElementById("bird").style.transform = "translate(6000px,0)";
+    setTimeout(YesYouCan, 200);
+}
+
+function YesYouCan() {
+    canGrow = true;
 }
