@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+body {
+    background-image: url(sprites/sky.jpg);
+    transition: 1s;
+    overflow: hidden;
+}
+.dirt {
+    width: 100%;
+    height: 40.2%;
+    position: fixed;
+    left: -0.01%;
+    bottom: 19%;
+}
+.hitBox {
+    position: fixed; 
+    background: transparent; 
+    width: 100%;
+    height: 17.6%; 
+    bottom: 0%; 
+    z-index: 9999; 
+}
+#bird {
+  position: absolute; 
+  height: 100px; 
+  width: 100px; 
+  left: -100px;
+  transition: 1s;
+}
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+#Color {
+  font-size: calc(20px + 18vh);
+  line-height: calc(20px + 20vh);
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sans", cursive;
+  font-size: 12em;
+  text-align: center;
+  margin-top: -10px;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
