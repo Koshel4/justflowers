@@ -24,7 +24,7 @@ body {
   height: 100px; 
   width: 100px; 
   left: -100px;
-  transition: 1s;
+  transition: 2s;
 }
 img {
     pointer-events: none;
